@@ -6,7 +6,7 @@ defmodule KobayashiMaruWeb.Router do
   end
 
   pipeline :api_auth do
-    plug(KobayashiMaru.Auth.Pipeline)
+    plug(Toltec.Auth.Pipeline)
   end
 
   scope "/api", KobayashiMaruWeb do
