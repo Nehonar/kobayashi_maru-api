@@ -44,3 +44,8 @@ config :kobayashi_maru, KobayashiMaru.Repo,
   database: "kobayashi_maru_dev",
   hostname: "localhost",
   pool_size: 10
+
+  # guardian secret key to config
+  config :kobayashi_maru, KobayashiMaru.Auth.Guardian,
+    issure: "kobayashi_maru",
+    secret_key: "dpTuOMOGUvS4pIOnW22Rj+kQxt6TJo780palYEJFFm88ncVTPqOjYTaSENNpedOl"
