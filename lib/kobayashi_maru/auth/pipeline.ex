@@ -6,9 +6,9 @@ defmodule KobayashiMaru.Auth.Pipeline do
   in the encrypted token).
   """
   use Guardian.Plug.Pipeline,
-  otp_app: :kobayashi_maru,
-  module: KobayashiMaru.Auth.Guardian,
-  error_handler: KobayashiMaru.Auth.ErrorHandler
+    otp_app: :kobayashi_maru,
+    module: KobayashiMaru.Auth.Guardian,
+    error_handler: KobayashiMaru.Auth.ErrorHandler
 
   plug(Guardian.Plug.VerifyHeader)
   plug(Guardian.Plug.EnsureAuthenticated)
