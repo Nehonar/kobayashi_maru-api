@@ -7,6 +7,7 @@ defmodule KobayashiMaruWeb.SessionController do
   alias KobayashiMaru.Accounts
   alias KobayashiMaru.Auth.Guardian
 
+  @spec create(Plug.Conn.t(), any) :: Plug.Conn.t()
   def create(conn, params) do
     case authenticate(params) do
       {:ok, user} ->
@@ -24,6 +25,7 @@ defmodule KobayashiMaruWeb.SessionController do
     end
   end
 
+  @spec delete(Plug.Conn.t(), any) :: Plug.Conn.t()
   def delete(conn, _) do
     conn
   |> Guardian.Plug.sign_out()
@@ -31,6 +33,7 @@ defmodule KobayashiMaruWeb.SessionController do
   |> render("delete.json")
   end
 
+  @spec refresh(Plug.Conn.t(), any) :: Plug.Conn.t()
   def refresh(conn, _params) do
     user = Guardian.Plug.current_resource(conn)
     jwt = Guardian.Plug.current_token(conn)

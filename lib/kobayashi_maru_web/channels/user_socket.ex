@@ -19,6 +19,7 @@ defmodule KobayashiMaruWeb.UserSocket do
   #
   # See `Phoenix.Token` documentation for examples in
   # performing token verification on connect.
+  @spec connect(any, any) :: {:ok, any}
   def connect(_params, socket) do
     {:ok, socket}
   end
@@ -33,5 +34,6 @@ defmodule KobayashiMaruWeb.UserSocket do
   #     KobayashiMaruWeb.Endpoint.broadcast("user_socket:#{user.id}", "disconnect", %{})
   #
   # Returning `nil` makes this socket anonymous.
+  @spec id(any) :: nil
   def id(_socket), do: nil
 end

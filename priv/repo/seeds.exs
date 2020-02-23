@@ -9,3 +9,12 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+user =
+  KobayashiMaru.Accounts.User.registration_changeset(%KobayashiMaru.Accounts.User{}, %{
+    name: "Kirk",
+    email: "kirk@kobayashiMaru",
+    password: "kirk@kobayashiMaru"
+  })
+
+  KobayashiMaru.Repo.insert!(user)

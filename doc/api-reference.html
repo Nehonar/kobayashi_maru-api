@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.21.3">
+    <meta name="project" content="kobayashi_maru v0.0.1">
+    <title>API Reference — kobayashi_maru v0.0.1</title>
+    <link rel="stylesheet" href="dist/elixir-0ab8a6a80ebaaa287431.css" />
+    <script src="dist/sidebar_items-22309c8cec.js"></script>
+      <script src="docs_config.js"></script>
+    <script async src="dist/app-a225d03098e64fef431a.js"></script>
+  </head>
+  <body data-type="extras">
+    <script>try { if(localStorage.getItem('night-mode') === 'true') document.body.className += ' night-mode'; } catch (e) { }</script>
+<div class="main">
+
+<button class="sidebar-button sidebar-toggle">
+  <span class="icon-menu" title="Collapse/expand sidebar"></span>
+</button>
+
+<section class="sidebar">
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <button type="button" tabindex="-1" class="search-close-button">
+      <span class="icon-cross" title="Cancel search"></span>
+    </button>
+    <label class="search-label">
+      <input name="q" type="text" id="search-list" class="search-input" placeholder="Search..." aria-label="Search" autocomplete="off" />
+    </label>
+  </form>
+
+  <div class="autocomplete">
+    <div class="autocomplete-results">
+    </div>
+  </div>
+
+  <div class="sidebar-header">
+    <div class="sidebar-projectDetails">
+      <a href="api-reference.html" class="sidebar-projectName">
+kobayashi_maru      </a>
+      <h2 class="sidebar-projectVersion">
+        v0.0.1
+      </h2>
+    </div>
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+<h1>
+  <small class="app-vsn">kobayashi_maru v0.0.1</small>
+  API Reference
+</h1>
+
+  <section class="details-list">
+    <h2 id="modules" class="section-heading">
+  <a href="#modules" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Modules
+</h2>
+
+    <div class="summary">
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="KobayashiMaru.html">KobayashiMaru</a>
+  </div>
+    <div class="summary-synopsis"><p>KobayashiMaru keeps the contexts that define your domain
+and business logic.</p></div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="KobayashiMaru.Accounts.html">KobayashiMaru.Accounts</a>
+  </div>
+    <div class="summary-synopsis"><p>Accounts context that holds all the logic for accounts.</p></div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="KobayashiMaru.Accounts.User.html">KobayashiMaru.Accounts.User</a>
+  </div>
+    <div class="summary-synopsis"><p>I have added a password virtual field, to temporarily hold the clear-text password.
+This will never be saved to the DB. I also added two changesets,
+one for changing the password and one for the other fields.
+The put_password_hash() function uses the comeonin library
+to get a hash of the password and put that on the password_hash field
+that will be stored in DB.</p></div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="KobayashiMaru.Application.html">KobayashiMaru.Application</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="KobayashiMaru.Auth.ErrorHandler.html">KobayashiMaru.Auth.ErrorHandler</a>
+  </div>
+    <div class="summary-synopsis"><p>The Guardian Pipeline will need a module to handle the error it may found.</p></div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="KobayashiMaru.Auth.Guardian.html">KobayashiMaru.Auth.Guardian</a>
+  </div>
+    <div class="summary-synopsis"><p>This file responsibility is to convert between a token
+an a resource (a user) and between a resource (our user)
+and a unique identifier to be encoded in the token
+that will be passed all over the place.</p></div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="KobayashiMaru.Auth.Guardian.Plug.html">KobayashiMaru.Auth.Guardian.Plug</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="KobayashiMaru.Auth.Pipeline.html">KobayashiMaru.Auth.Pipeline</a>
+  </div>
+    <div class="summary-synopsis"><p>Essentially checks that a request made to our app has a header with the token,
+ensure that the token is valid and, if it is, loads the resource automatically
+(that is, loads the user corresponding to the token&#39;s claims[&quot;sub&quot;] value
+in the encrypted token).</p></div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="KobayashiMaru.Repo.html">KobayashiMaru.Repo</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="KobayashiMaruWeb.html">KobayashiMaruWeb</a>
+  </div>
+    <div class="summary-synopsis"><p>The entrypoint for defining your web interface, such
+as controllers, views, channels and so on.</p></div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="KobayashiMaruWeb.Endpoint.html">KobayashiMaruWeb.Endpoint</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="KobayashiMaruWeb.ErrorHelpers.html">KobayashiMaruWeb.ErrorHelpers</a>
+  </div>
+    <div class="summary-synopsis"><p>Conveniences for translating and building error messages.</p></div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="KobayashiMaruWeb.ErrorView.html">KobayashiMaruWeb.ErrorView</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="KobayashiMaruWeb.Gettext.html">KobayashiMaruWeb.Gettext</a>
+  </div>
+    <div class="summary-synopsis"><p>A module providing Internationalization with a gettext-based API.</p></div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="KobayashiMaruWeb.Router.html">KobayashiMaruWeb.Router</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="KobayashiMaruWeb.Router.Helpers.html">KobayashiMaruWeb.Router.Helpers</a>
+  </div>
+    <div class="summary-synopsis"><p>Module with named helpers generated from KobayashiMaruWeb.Router.</p></div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="KobayashiMaruWeb.SessionController.html">KobayashiMaruWeb.SessionController</a>
+  </div>
+    <div class="summary-synopsis"><p>  Its responsibilities are to create new sessions, delete them and refresh them.</p></div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="KobayashiMaruWeb.SessionView.html">KobayashiMaruWeb.SessionView</a>
+  </div>
+    <div class="summary-synopsis"><p>This is similar although a bit more complex.
+The show.json view renders the user and the token to the client.</p></div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="KobayashiMaruWeb.UserController.html">KobayashiMaruWeb.UserController</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="KobayashiMaruWeb.UserSocket.html">KobayashiMaruWeb.UserSocket</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="KobayashiMaruWeb.UserView.html">KobayashiMaruWeb.UserView</a>
+  </div>
+    <div class="summary-synopsis"><p>  The render method receives a user and returns a map
+  with the properties that we want to expos to the clients.</p></div>
+</div>
+    </div>
+  </section>
+
+      <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.21.3),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" rel="noopener" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+        </p>
+        <p>
+          <button class="line footer-button display-shortcuts-help">
+            Display keyboard shortcuts
+          </button>
+          <button class="line footer-button night-mode-toggle">
+            Toggle night mode
+          </button>
+          <button class="line footer-button display-quick-switch">
+            Go to a HexDocs package
+          </button>
+          <button class="line footer-button tooltips-toggle">
+            <span class="tooltips-option-disable">Disable tooltips</span>
+            <span class="tooltips-option-enable">Enable tooltips</span>
+          </button>
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  </body>
+</html>

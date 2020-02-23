@@ -13,6 +13,7 @@ defmodule KobayashiMaru.Auth.Guardian do
     {:ok, sub}
   end
 
+  @spec resource_from_claims(nil | keyword | map) :: {:error, String} | {:ok, any}
   def resource_from_claims(claims) do
     case KobayashiMaru.Accounts.get_user(claims["sub"]) do
       nil -> {:error, "User not found"}
