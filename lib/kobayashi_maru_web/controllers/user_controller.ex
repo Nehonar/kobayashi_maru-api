@@ -7,6 +7,8 @@ defmodule KobayashiMaruWeb.UserController do
 
   action_fallback(KobayashiMaruWeb.FallbackController)
 
+  @spec create(any, :invalid | %{optional(:__struct__) => none, optional(atom | binary) => any}) ::
+          any
   def create(conn, params) do
     with {:ok, %User{} = user} <- Accounts.create_user(params) do
       new_conn = Guardian.Plug.sign_in(conn, user)

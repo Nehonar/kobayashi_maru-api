@@ -33,16 +33,17 @@ defmodule KobayashiMaru.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:argon2_elixir, "~> 1.2"},
+      {:comeonin, "~> 4.0"},
+      {:cowboy, "~> 1.0"},
+      {:ex_doc, "~> 0.18", only: :dev},
+      {:gettext, "~> 0.11"},
+      {:guardian, "~> 1.0"},
       {:phoenix, "~> 1.3.4"},
       {:phoenix_pubsub, "~> 1.0"},
       {:phoenix_ecto, "~> 3.2"},
-      {:postgrex, ">= 0.0.0"},
-      {:gettext, "~> 0.11"},
       {:plug_cowboy, "~> 1.0"},
-      {:cowboy, "~> 1.0"},
-      {:comeonin, "~> 4.0"},
-      {:argon2_elixir, "~> 1.2"},
-      {:guardian, "~> 1.0"}
+      {:postgrex, ">= 0.0.0"}
     ]
   end
 
