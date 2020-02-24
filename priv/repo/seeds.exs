@@ -12,9 +12,9 @@
 
 user =
   KobayashiMaru.Accounts.User.registration_changeset(%KobayashiMaru.Accounts.User{}, %{
-    name: "Kirk",
-    email: "kirk@kobayashiMaru",
-    password: "kirk@kobayashiMaru"
+    name: "some user",
+    email: "user@kobayashiMaru",
+    password: "user@kobayashiMaru"
   })
 
   KobayashiMaru.Repo.insert!(user)

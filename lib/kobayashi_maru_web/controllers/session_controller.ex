@@ -18,19 +18,19 @@ defmodule KobayashiMaruWeb.SessionController do
         |> put_status(:created)
         |> render("show.json", user: user, jwt: jwt)
 
-        :error ->
-          conn
-          |> put_status(:unauthorized)
-          |> render("error.json", error: "User or email invalid")
+      :error ->
+        conn
+        |> put_status(:unauthorized)
+        |> render("error.json", error: "User or email invalid")
     end
   end
 
   @spec delete(Plug.Conn.t(), any) :: Plug.Conn.t()
   def delete(conn, _) do
     conn
-  |> Guardian.Plug.sign_out()
-  |> put_status(:no_content)
-  |> render("delete.json")
+    |> Guardian.Plug.sign_out()
+    |> put_status(:no_content)
+    |> render("delete.json")
   end
 
   @spec refresh(Plug.Conn.t(), any) :: Plug.Conn.t()
@@ -54,5 +54,9 @@ defmodule KobayashiMaruWeb.SessionController do
   defp authenticate(%{"email" => email, "password" => password}) do
     Accounts.authenticate(email, password)
   end
-  defp authenticate(_), do: :error
+  defp authenticate(_) do
+    {mega, sec, mili} = :os.timestamp()
+    Accounts.create_guest_user(%{"token" => "#{mega}#{sec}#{mili}"})
+    |> IO.inspect(label: "AUTHENTICATE FINISHED")
+  end
 end

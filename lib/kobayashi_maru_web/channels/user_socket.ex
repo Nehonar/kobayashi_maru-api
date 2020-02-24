@@ -19,7 +19,7 @@ defmodule KobayashiMaruWeb.UserSocket do
   #
   # See `Phoenix.Token` documentation for examples in
   # performing token verification on connect.
-  @spec connect(any, any) :: {:ok, any}
+  # @spec connect(any, any) :: {:ok, any}
   def connect(_params, socket) do
     {:ok, socket}
   end
