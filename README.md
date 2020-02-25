@@ -40,7 +40,17 @@ Let's try now the logout request. This is a DELETE request that only needs to in
 ```
 curl --request DELETE \
   --url http://localhost:4000/api/sessions \
-  --header 'authorization: Kobayashi_maru dpTuOMOGUvS4pIOnW22RjkQxt6TJo780palYEJFFm88ncVTPqOjYTaSENNpedOl' --verbose
+  --header 'authorization: Kobayashi_maru <token>' --verbose
+```
+
+```
+curl --request POST \
+  --url http://localhost:4000/api/users \
+  --header 'authorization: Kobayashi_maru' \
+  --header 'content-type: application/x-www-form-urlencoded' \
+  --data email=kirk%40kobayashiMaru \
+  --data password=kirk%40kobayashiMaru \
+  --data name=kirk%40kobayashiMaru
 ```
 
 
