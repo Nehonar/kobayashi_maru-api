@@ -1,13 +1,14 @@
 defmodule KobayashiMaru.Accounts.User do
   use Ecto.Schema
   import Ecto.Changeset
+
   alias KobayashiMaru.Accounts.User
 
   schema "users" do
-    field :email, :string
-    field :name, :string
-    field :password, :string, virtual: true
-    field :password_hash, :string
+    field(:email, :string)
+    field(:name, :string)
+    field(:password, :string, virtual: true)
+    field(:password_hash, :string)
 
     timestamps()
   end
