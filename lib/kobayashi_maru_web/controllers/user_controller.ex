@@ -10,6 +10,8 @@ defmodule KobayashiMaruWeb.UserController do
   @spec create(any, :invalid | %{optional(:__struct__) => none, optional(atom | binary) => any}) ::
           any
   def create(conn, params) do
+    IO.inspect(params, label: "PARAMS")
+
     with {:ok, %User{} = user} <- Accounts.create_user(params) do
       new_conn = Guardian.Plug.sign_in(conn, user)
       jwt = Guardian.Plug.current_token(new_conn)

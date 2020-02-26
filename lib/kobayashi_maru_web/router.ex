@@ -14,6 +14,7 @@ defmodule KobayashiMaruWeb.Router do
 
     post("/sessions", SessionController, :create)
     post("/users", UserController, :create)
+    post("/addproductcart", ProductController, :init)
   end
 
   scope "/api", KobayashiMaruWeb do
