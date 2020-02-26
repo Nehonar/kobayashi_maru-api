@@ -10,9 +10,9 @@ Run doc/index.html
   - At the moment it lifts the service with which we can create API gateway connections
   and create users in database.
   - I know that this is a part that was not required, but for the future it would be necessary, since if you create a shopping cart, and the customer really wants to make the purchase, in the end all that data should be saved in the database In addition, all products that must be purchased must be subtracted from the stock.
-    - On the other hand we must take into account whether the purchase will be taken to a store or directly to the customer's home.
-      - If it is to the store, you must specify the store and send the notice to the store.
-      - If it is at the client's house, we will need the client's data again.
+  - On the other hand we must take into account whether the purchase will be taken to a store or directly to the customer's home.
+    - If it is to the store, you must specify the store and send the notice to the store.
+    - If it is at the client's house, we will need the client's data again.
   - In terms of programming I have been surpassed for being the first time I had to create an API gateway service, I have not had time to do more tests and see how it worked.
 
 ## Observations
@@ -24,9 +24,20 @@ This project has really demanded my concentration, I had been in a comfort zone 
   * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
   * Start Phoenix endpoint with `mix phx.server`
 
+# If not works
+* If you have problems wuit run psql try this:
+```
+psql -h localhost -U postgres
+```
+
+* Problems with Guardian token:
+```
+mix guardian.gen.secret
+```
+- Copy the token and paste in config :kobayashi_maru, KobayashiMaru.Auth.Guardian
+
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-  * If you have problems wuit run psql try this -> psql -h localhost -U postgres
 
 ## Curl
 Let's do a login request. This needs to be a POST request to the /api/sessions route. And we need to pass the email and password as parameters. We already have one user in our app inserted in our seeds.exs.
@@ -35,8 +46,8 @@ curl --request POST \
   --url http://localhost:4000/api/sessions \
   --header 'authorization: Kobayashi_maru' \
   --header 'content-type: application/x-www-form-urlencoded' \
-  --data email=user%40kobayashiMaru \
-  --data password=user%40kobayashiMaru
+  --data email=kirk%40kobayashiMaru \
+  --data password=kirk%40kobayashiMaru
 ```
 Let's try now the logout request. This is a DELETE request that only needs to include the token as a header.
 ```
@@ -44,7 +55,7 @@ curl --request DELETE \
   --url http://localhost:4000/api/sessions \
   --header 'authorization: Kobayashi_maru <token>' --verbose
 ```
-
+Now try to create a new user
 ```
 curl --request POST \
   --url http://localhost:4000/api/users \
@@ -53,6 +64,15 @@ curl --request POST \
   --data email=kirk%40kobayashiMaru \
   --data password=kirk%40kobayashiMaru \
   --data name=kirk%40kobayashiMaru
+```
+Let's go to add a product to cart and create a guest user
+```
+curl --request POST \
+  --url http://localhost:4000/api/addproductcart \
+  --header 'authorization: Kobayashi_maru' \ 
+  --header 'content-type: application/x-www-form-urlencoded' \
+  --data product=table \
+  --data prodcut_id=1 
 ```
 
 Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).

@@ -39,6 +39,7 @@ defmodule KobayashiMaru.Mixfile do
       {:ex_doc, "~> 0.18", only: :dev},
       {:gettext, "~> 0.11"},
       {:guardian, "~> 1.0"},
+      {:jason, "~> 1.1"},
       {:phoenix, "~> 1.3.4"},
       {:phoenix_pubsub, "~> 1.0"},
       {:phoenix_ecto, "~> 3.2"},
