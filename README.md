@@ -10,9 +10,9 @@ Run doc/index.html
   - At the moment it lifts the service with which we can create API gateway connections
   and create users in database.
   - I know that this is a part that was not required, but for the future it would be necessary, since if you create a shopping cart, and the customer really wants to make the purchase, in the end all that data should be saved in the database In addition, all products that must be purchased must be subtracted from the stock.
-    - On the other hand we must take into account whether the purchase will be taken to a store or directly to the customer's home.
-      - If it is to the store, you must specify the store and send the notice to the store.
-      - If it is at the client's house, we will need the client's data again.
+  - On the other hand we must take into account whether the purchase will be taken to a store or directly to the customer's home.
+    - If it is to the store, you must specify the store and send the notice to the store.
+    - If it is at the client's house, we will need the client's data again.
   - In terms of programming I have been surpassed for being the first time I had to create an API gateway service, I have not had time to do more tests and see how it worked.
 
 ## Observations
@@ -65,7 +65,7 @@ curl --request POST \
   --data password=kirk%40kobayashiMaru \
   --data name=kirk%40kobayashiMaru
 ```
-Let's go to add a product to cart
+Let's go to add a product to cart and create a guest user
 ```
 curl --request POST \
   --url http://localhost:4000/api/addproductcart \

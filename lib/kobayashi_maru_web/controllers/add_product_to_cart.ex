@@ -2,12 +2,13 @@ defmodule KobayashiMaruWeb.ProductController do
   use KobayashiMaruWeb, :controller
 
   alias KobayashiMaru.Accounts
-  alias KobayashiMaru.Accounts.User
   alias KobayashiMaru.Auth.Guardian
   alias KobayashiMaruWeb.UserController
 
   action_fallback(KobayashiMaruWeb.FallbackController)
 
+  @spec init(any, :invalid | %{optional(:__struct__) => none, optional(atom | binary) => any}) ::
+          any
   def init(conn, params) do
     case authenticate(params) do
       {:ok, user} ->
@@ -20,10 +21,6 @@ defmodule KobayashiMaruWeb.ProductController do
 
       :error ->
         UserController.create(conn, create_guest_user())
-
-        # conn
-        # |> put_status(:unauthorized)
-        # |> render("error.json", error: "User or email invalid")
     end
   end
 
