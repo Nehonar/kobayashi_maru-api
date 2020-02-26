@@ -54,5 +54,6 @@ defmodule KobayashiMaruWeb.SessionController do
   defp authenticate(%{"email" => email, "password" => password}) do
     Accounts.authenticate(email, password)
   end
+
   defp authenticate(_), do: :error
 end

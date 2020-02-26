@@ -8,7 +8,7 @@
     <meta name="project" content="kobayashi_maru v0.0.1">
     <title>KobayashiMaru.Accounts — kobayashi_maru v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-0ab8a6a80ebaaa287431.css" />
-    <script src="dist/sidebar_items-22309c8cec.js"></script>
+    <script src="dist/sidebar_items-4476286fbb.js"></script>
       <script src="docs_config.js"></script>
     <script async src="dist/app-a225d03098e64fef431a.js"></script>
   </head>
@@ -90,7 +90,17 @@ KobayashiMaru.Accounts      </h1>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#change_guest_user/1">change_guest_user(guest_user)</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#change_user/1">change_user(user)</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#create_guest_user/1">create_guest_user(attrs \\ %{})</a>
   </div>
 </div>
 <div class="summary-row">
@@ -100,7 +110,17 @@ KobayashiMaru.Accounts      </h1>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#delete_guest_user/1">delete_guest_user(guest_user)</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#delete_user/1">delete_user(user)</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_guest_user/1">get_guest_user(id)</a>
   </div>
 </div>
 <div class="summary-row">
@@ -110,7 +130,17 @@ KobayashiMaru.Accounts      </h1>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#list_guest_users/0">list_guest_users()</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#list_users/0">list_users()</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#update_guest_user/2">update_guest_user(guest_user, attrs)</a>
   </div>
 </div>
 <div class="summary-row">
@@ -144,6 +174,20 @@ Functions          </h1>
   <section class="docstring">
   </section>
 </section>
+<section class="detail" id="change_guest_user/1">
+  <div class="detail-header">
+    <a href="#change_guest_user/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature">change_guest_user(guest_user)</h1>
+      <div class="specs">
+          <pre>change_guest_user(<a href="KobayashiMaru.Accounts.GuestUser.html#t:t/0">KobayashiMaru.Accounts.GuestUser.t</a>()) :: <a href="https://hexdocs.pm/ecto/2.2.12/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()</pre>
+      </div>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
 <section class="detail" id="change_user/1">
   <div class="detail-header">
     <a href="#change_user/1" class="detail-link" title="Link to this function">
@@ -153,6 +197,24 @@ Functions          </h1>
     <h1 class="signature">change_user(user)</h1>
       <div class="specs">
           <pre>change_user(<a href="KobayashiMaru.Accounts.User.html#t:t/0">KobayashiMaru.Accounts.User.t</a>()) :: <a href="https://hexdocs.pm/ecto/2.2.12/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()</pre>
+      </div>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
+<section class="detail" id="create_guest_user/1">
+    <span id="create_guest_user/0"></span>
+  <div class="detail-header">
+    <a href="#create_guest_user/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature">create_guest_user(attrs \\ %{})</h1>
+      <div class="specs">
+          <pre>create_guest_user(
+  :invalid
+  | %{optional(:__struct__) => <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">none</a>(), optional(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>() | <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">binary</a>()) => <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()}
+) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()</pre>
       </div>
   </div>
   <section class="docstring">
@@ -176,6 +238,17 @@ Functions          </h1>
   <section class="docstring">
   </section>
 </section>
+<section class="detail" id="delete_guest_user/1">
+  <div class="detail-header">
+    <a href="#delete_guest_user/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature">delete_guest_user(guest_user)</h1>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
 <section class="detail" id="delete_user/1">
   <div class="detail-header">
     <a href="#delete_user/1" class="detail-link" title="Link to this function">
@@ -185,6 +258,20 @@ Functions          </h1>
     <h1 class="signature">delete_user(user)</h1>
       <div class="specs">
           <pre>delete_user(<a href="KobayashiMaru.Accounts.User.html#t:t/0">KobayashiMaru.Accounts.User.t</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()</pre>
+      </div>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
+<section class="detail" id="get_guest_user/1">
+  <div class="detail-header">
+    <a href="#get_guest_user/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature">get_guest_user(id)</h1>
+      <div class="specs">
+          <pre>get_guest_user(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()</pre>
       </div>
   </div>
   <section class="docstring">
@@ -204,6 +291,20 @@ Functions          </h1>
   <section class="docstring">
   </section>
 </section>
+<section class="detail" id="list_guest_users/0">
+  <div class="detail-header">
+    <a href="#list_guest_users/0" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature">list_guest_users()</h1>
+      <div class="specs">
+          <pre>list_guest_users() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()</pre>
+      </div>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
 <section class="detail" id="list_users/0">
   <div class="detail-header">
     <a href="#list_users/0" class="detail-link" title="Link to this function">
@@ -213,6 +314,24 @@ Functions          </h1>
     <h1 class="signature">list_users()</h1>
       <div class="specs">
           <pre>list_users() :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()</pre>
+      </div>
+  </div>
+  <section class="docstring">
+  </section>
+</section>
+<section class="detail" id="update_guest_user/2">
+  <div class="detail-header">
+    <a href="#update_guest_user/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature">update_guest_user(guest_user, attrs)</h1>
+      <div class="specs">
+          <pre>update_guest_user(
+  <a href="KobayashiMaru.Accounts.GuestUser.html#t:t/0">KobayashiMaru.Accounts.GuestUser.t</a>(),
+  :invalid
+  | %{optional(:__struct__) => <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">none</a>(), optional(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>() | <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">binary</a>()) => <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()}
+) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()</pre>
       </div>
   </div>
   <section class="docstring">

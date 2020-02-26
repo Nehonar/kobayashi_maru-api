@@ -26,6 +26,8 @@ This project has really demanded my concentration, I had been in a comfort zone 
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
+  * If you have problems wuit run psql try this -> psql -h localhost -U postgres
+
 ## Curl
 Let's do a login request. This needs to be a POST request to the /api/sessions route. And we need to pass the email and password as parameters. We already have one user in our app inserted in our seeds.exs.
 ```
@@ -53,11 +55,13 @@ curl --request POST \
   --data name=kirk%40kobayashiMaru
 ```
 
-
 Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
 
 ## Reference
 Guide of API Gateway https://dev.to/miguelcoba/elixir-api-and-elm-spa-4hpf
+
+## Pending
+paswword_hash
 
 ## Learn more
 
