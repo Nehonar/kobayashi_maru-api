@@ -81,7 +81,11 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 Guide of API Gateway https://dev.to/miguelcoba/elixir-api-and-elm-spa-4hpf
 
 ## Pending
-paswword_hash
+Check password_hash to tests
+Check save data in localStorage
+Check how can I do return current info
+Check when they add new product in cart, if we have stock in productDB
+When a guest user decide that want a product list, at name of who is save the delivery?
 
 ## Learn more
 
