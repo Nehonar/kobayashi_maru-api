@@ -9,6 +9,8 @@ defmodule KobayashiMaruWeb.SessionController do
 
   @spec create(Plug.Conn.t(), any) :: Plug.Conn.t()
   def create(conn, params) do
+    IO.inspect(params, label: "SESSIONS PARAMS")
+
     case authenticate(params) do
       {:ok, user} ->
         new_conn = Guardian.Plug.sign_in(conn, user)

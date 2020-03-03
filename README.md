@@ -74,6 +74,17 @@ curl --request POST \
   --data product=table \
   --data prodcut_id=1 
 ```
+```
+curl --request POST \
+  --url http://localhost:4000/api/addproductcart \
+  --header 'authorization: Kobayashi_maru' \ 
+  --header 'content-type: application/x-www-form-urlencoded' \
+  --data name=1583155832670294 \
+  --data email=1583155832670294%40kobayashiMaru \
+  --data password=1583155832670294%40kobayashiMaru \
+  --data product=table2 \
+  --data prodcut_id=12
+```
 
 Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
 

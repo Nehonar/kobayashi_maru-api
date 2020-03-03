@@ -7,9 +7,13 @@ defmodule KobayashiMaruWeb.ProductController do
 
   action_fallback(KobayashiMaruWeb.FallbackController)
 
+  def init(conn, %{email: _email, name: _name}), do: IO.puts("Ahora")
+
   @spec init(any, :invalid | %{optional(:__struct__) => none, optional(atom | binary) => any}) ::
           any
   def init(conn, params) do
+    IO.inspect(params, label: "::::::::: PARAMS ::::::::")
+
     case authenticate(params) do
       {:ok, user} ->
         new_conn = Guardian.Plug.sign_in(conn, user)
